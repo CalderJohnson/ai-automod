@@ -33,9 +33,9 @@ for _, row in df.iterrows():
     if row["rating"] == "rating": # Ignore header
         continue
     encoded_dict = tokenizer.encode_plus(
-        row["content"],              # Sentence to encode.
+        row["content"],               # Sentence to encode.
         add_special_tokens = True,    # Add '[CLS]' and '[SEP]'
-        max_length = 128,              # Pad & truncate all sentences.
+        max_length = 256,             # Pad & truncate all sentences.
         truncation=True,
         pad_to_max_length = True,
         return_attention_mask = True, # Construct attn. masks.

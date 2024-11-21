@@ -16,6 +16,9 @@ if os.path.exists(output_file):
 
 try:
     # Read and concatenate all CSV files
+    print(input_files[1])
+    pd.read_csv(input_files[1])
+    print("ok")
     dataframes = [pd.read_csv(file) for file in input_files]
     concatenated_df = pd.concat(dataframes, ignore_index=True)
 
